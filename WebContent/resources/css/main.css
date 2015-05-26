@@ -1,0 +1,23 @@
+body{
+	padding: 20px;
+}
+
+.head{
+	background-color: teal;
+	height: 150px;
+}
+
+.esquerda{
+	float: left;
+	margin-left: 20px;
+}
+
+.titulo{
+	color: white;
+	font-family: sans-serif;
+}
+
+.center{
+	text-align: center;
+}
+
