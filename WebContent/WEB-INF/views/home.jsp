@@ -4,7 +4,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+<style type="text/css" media="screen">
+	 @import url("<c:url value="/resources/css/main.css"/>");
+</style>
+
+<!-- link rel="stylesheet" href="resources/css/main.css" -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Medicia e Saúde</title>
 </head>
@@ -13,14 +17,14 @@
 	<%@ include file="/WEB-INF/views/head.jsp" %>
 		
 	<div class="center">
-		<a href='<c:url value="medicos"/>' >
-			<img width="200px" alt="imagem medico" src="resources/img/doctor.png">
+		<a href='<c:url value="/medicos/"/>' >
+			<img width="200px" alt="imagem medico" src="${pageContext.servletContext.contextPath}/resources/img/doctor.png">
 		</a>
 		
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		
 		<a href="#">
-			<img width="200px" alt="imagem relatorio" src="resources/img/report.png">	
+			<img width="200px" alt="imagem relatorio" src="${pageContext.servletContext.contextPath}/resources/img/report.png">	
 		</a>
 	</div>
 	</br>

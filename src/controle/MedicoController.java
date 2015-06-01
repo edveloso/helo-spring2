@@ -12,30 +12,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("medicos")
+@RequestMapping("/medicos")
 public class MedicoController {
 
 	@Autowired
 	private MedicoDAO medicoDAO;
 	
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String listar(Model model) {
 		List<Medico> medicos = medicoDAO.listar();
 		model.addAttribute("lista_medico", medicos );
-		return "lista";
+		return "medicos/lista";
 	}
 	
-	@RequestMapping(value="novo", method=RequestMethod.GET)
+	@RequestMapping(value="/novo", method=RequestMethod.GET)
 	public String novo(){
-		return "form";
+		return "medicos/form";
 	}
 	
-	@RequestMapping(value="gravarMedico", method=RequestMethod.POST)
+	@RequestMapping(value="/gravarMedico", method=RequestMethod.POST)
 	public String gravar(Medico medico, Model model){
 		medicoDAO.salvar(medico); 
-		List<Medico> medicos = medicoDAO.listar();
-		model.addAttribute("lista_medico", medicos );
-		return "lista";
+		return "redirect:/medicos/";
 	}
 	
 	

@@ -11,7 +11,10 @@
 	<div class="head">	
 		
 		<div class="esquerda">
-			<img width="150px" alt="logo" src="resources/img/medicina.png">
+		
+		<a href='<c:url value="/inicio/" />' >
+			<img width="150px" alt="logo" src="${pageContext.servletContext.contextPath}/resources/img/medicina.png">
+			</a>
 		</div>
 		
 		<div class="esquerda titulo">
